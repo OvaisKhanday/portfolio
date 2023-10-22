@@ -1,2 +1,2 @@
 # portfolio
-Portfolio of me
+A basic "about me"
