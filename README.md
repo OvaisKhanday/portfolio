@@ -1,2 +1,2 @@
-# portfolio
-A basic "about me"
+# portfolio beta
+Basic information "about me"
