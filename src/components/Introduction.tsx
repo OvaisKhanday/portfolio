@@ -10,7 +10,7 @@ const Introduction: FC<IntroductionProps> = () => {
         <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover' />
       </div>
       <div className='text-center md:text-left max-w-2xl'>
-        <h1 className='font-extrabold text-zinc-200 mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-5xl lg:text-6xl'>
+        <h1 className='font-extrabold mb-6 lg:pb-3 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-5xl lg:text-6xl'>
           Ovais Ahmad Khanday
         </h1>
         <h3 className='font-bold text-xl text-zinc-300/85 mb-1'>Software Developer</h3>
