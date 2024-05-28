@@ -6,7 +6,7 @@ interface IntroductionProps {}
 const Introduction: FC<IntroductionProps> = () => {
   return (
     <div className='flex flex-col  gap-4 items-center justify-around md:flex-row'>
-      <div className='w-48 md:w-80 md:h-80 flex-shrink-0 h-48 rounded-full overflow-hidden'>
+      <div className='w-48 md:w-80 md:h-80 flex-shrink-0 h-48 rounded-full overflow-hidden transition hover:scale-105 outline outline-2 outline-white'>
         <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover' />
       </div>
       <div className='text-center md:text-left max-w-2xl'>
