@@ -13,7 +13,7 @@ export interface ProjectTileProps {
 const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) => {
   const { title, tagLine, description, imageUrl, liveLink, codeLink } = projectDetails;
   return (
-    <div className='flex flex-col md:flex-row transition hover:scale-x-105'>
+    <div className='flex flex-col md:flex-row transition hover:scale-[1.03]'>
       <div
         className=' flex-shrink-0 p-4 flex flex-col justify-end text-left rounded-tl-lg rounded-bl-lg w-full md:w-60 min-h-64 bg-no-repeat bg-cover bg-slate-700'
         style={{ backgroundImage: `url(${imageUrl})` }}
