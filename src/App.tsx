@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='max-w-7xl'>
       <div className='mt-32 md:mt-44' />
-      <Spotlight className='-top-40 left-0 md:left-96 md:-top-20' fill='white' />
+      <Spotlight className='-top-40 left-0 md:left-60 md:-top-20' fill='white' />
       <Introduction />
       <Skills />
       <Projects />
