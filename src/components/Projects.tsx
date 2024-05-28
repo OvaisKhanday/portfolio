@@ -47,7 +47,7 @@ const projects: ProjectTileProps[] = [
 const Projects: FC<ProjectsProps> = () => {
   return (
     <div className='mt-20'>
-      <h2 className='text-4xl text-gray-400 font-bold'>Projects</h2>
+      <h2 className='text-4xl text-gray-400 font-bold '>Projects</h2>
 
       <div className='mt-6 grid gap-8 grid-cols-1 lg:grid-cols-2'>
         {projects.map((project) => (
