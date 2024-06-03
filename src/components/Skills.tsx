@@ -88,6 +88,12 @@ const SKILLS: AnimatedTooltipItemType[] = [
     designation: "intermediate",
     image: "/postman.png",
   },
+  {
+    id: 15,
+    name: "Redux",
+    designation: "advanced",
+    image: "/redux.png",
+  },
 ];
 
 const Skills: FC<SkillsProps> = () => {
