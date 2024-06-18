@@ -1,12 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import { motion, useTransform, useMotionValue, useSpring } from "framer-motion";
-export interface AnimatedTooltipItemType {
-  id: number;
-  name: string;
-  designation: string;
-  image: string;
-}
+import { AnimatedTooltipItemType } from "../../lib/skills";
+
 export const AnimatedTooltip = ({ items }: { items: AnimatedTooltipItemType[] }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };

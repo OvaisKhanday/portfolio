@@ -1,14 +1,5 @@
 import { Code2, Globe } from "lucide-react";
-
-export interface ProjectTileProps {
-  id: number;
-  title: string;
-  tagLine: string;
-  description: string;
-  imageUrl: string;
-  liveLink?: string;
-  codeLink?: string;
-}
+import { ProjectTileProps } from "../lib/projects";
 
 const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) => {
   const { title, tagLine, description, imageUrl, liveLink, codeLink } = projectDetails;
