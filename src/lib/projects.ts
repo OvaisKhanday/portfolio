@@ -21,6 +21,16 @@ export const PROJECTS: ProjectTileProps[] = [
   },
   {
     id: 2,
+    title: "Quixlar",
+    tagLine: "The ultimate online quiz platform",
+    description:
+      "Introducing Quixlar, the ultimate online quiz platform designed to make quiz creation and participation a breeze! Whether you’re an educator, trainer, or just someone who loves to test knowledge.",
+    imageUrl: "/quixlar-hero-1.png",
+	liveLink:"https://quixlar.vercel.app/",
+    codeLink: "https://github.com/OvaisKhanday/quixlar",
+  },
+  {
+    id: 3,
     title: "Chat8",
     tagLine: "A reat-time chatting web-app",
     description:
@@ -30,7 +40,7 @@ export const PROJECTS: ProjectTileProps[] = [
     codeLink: "https://github.com/OvaisKhanday/Chat8/",
   },
   {
-    id: 3,
+    id: 4,
     title: "careTracker",
     tagLine: "A full-stack school buses management system",
     description:
@@ -39,7 +49,7 @@ export const PROJECTS: ProjectTileProps[] = [
     codeLink: "https://github.com/OvaisKhanday/careTracker",
   },
   {
-    id: 4,
+    id: 5,
     title: "AqwaMarq",
     tagLine: "Applying watermarks on PDFs and images",
     description: "Developed a cross-platform compatible application for applying watermarks on PDFs and pictures. ",
@@ -47,7 +57,7 @@ export const PROJECTS: ProjectTileProps[] = [
     codeLink: "https://github.com/OvaisKhanday/aqwamarq",
   },
   {
-    id: 5,
+    id: 6,
     title: "Collaborative Whiteboard",
     tagLine: "Realtime whiteboard drawing",
     description:
@@ -55,4 +65,5 @@ export const PROJECTS: ProjectTileProps[] = [
     imageUrl: "/whiteboard-hero-1.png",
     codeLink: "https://github.com/OvaisKhanday/whiteboard",
   },
+  
 ] as const;
