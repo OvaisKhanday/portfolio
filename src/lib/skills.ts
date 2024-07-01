@@ -79,18 +79,6 @@ export const SKILLS: AnimatedTooltipItemType[] = [
   },
   {
     id: 13,
-    name: "REST API",
-    designation: "intermediate",
-    image: "/rest-api.png",
-  },
-  {
-    id: 14,
-    name: "Postman",
-    designation: "intermediate",
-    image: "/postman.png",
-  },
-  {
-    id: 15,
     name: "Redux",
     designation: "advanced",
     image: "/redux.png",
