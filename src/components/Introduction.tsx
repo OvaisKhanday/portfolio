@@ -1,16 +1,15 @@
-import { Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 import { FC } from "react";
 import RevealAnimation from "./RevealAnimation";
 import Skills from "./Skills";
+import ProfilePicture from "./ProfilePicture";
 
 interface IntroductionProps {}
 
 const Introduction: FC<IntroductionProps> = () => {
   return (
     <div className='flex flex-col  gap-4 items-center justify-around md:flex-row'>
-      <div className='w-48 md:w-80 md:h-80 flex-shrink-0 h-48 rounded-full overflow-hidden transition hover:scale-105 outline outline-2 outline-white'>
-        <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover' />
-      </div>
+      <ProfilePicture />
       <div className='text-center md:text-left max-w-2xl'>
         <RevealAnimation>
           <h1 className='font-extrabold mb-6 lg:pb-3 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-5xl lg:text-6xl'>
@@ -30,15 +29,18 @@ const Introduction: FC<IntroductionProps> = () => {
           <button className='rounded-lg  bg-zinc-600 text-zinc-50' onClick={() => window.open("/Resume SD.pdf", "_blank")}>
             Download CV ✨
           </button>
-          <span className='w-10' />
-          <button className='bg-gray-700' onClick={() => window.open("https://linkedin.com/in/ovaiskhanday", "_blank")}>
-            <Linkedin className=' text-blue-400' />
+          <span className='w-2 md:w-10' />
+          <button className='bg-gray-700 hover:bg-blue-600' onClick={() => window.open("https://linkedin.com/in/ovaiskhanday", "_blank")}>
+            <Linkedin className=' text-zinc-200' />
           </button>
-          <button className='bg-gray-700' onClick={() => window.open("mailto:ovaiskhanday927@gmail.com", "_blank")}>
-            <Mail className=' text-red-600' />
+          <button className='bg-gray-700 hover:bg-red-800' onClick={() => window.open("mailto:ovaiskhanday927@gmail.com", "_blank")}>
+            <Mail className=' text-zinc-200 ' />
           </button>
-          <button className='bg-gray-700' onClick={() => window.open("https://twitter.com/ovaiskhanday", "_blank")}>
+          <button className='bg-gray-700 hover:bg-blue-500' onClick={() => window.open("https://twitter.com/ovaiskhanday", "_blank")}>
             <Twitter className=' text-zinc-200' />
+          </button>
+          <button className='bg-gray-700 hover:bg-black' onClick={() => window.open("https://github.com/ovaiskhanday", "_blank")}>
+            <Github className=' text-zinc-200' />
           </button>
         </div>
         <Skills />

@@ -15,7 +15,7 @@ const Projects: FC<ProjectsProps> = () => {
         </h2>
       </RevealAnimation>
 
-      <div className='mt-6 grid gap-8 grid-cols-1 lg:grid-cols-2'>
+      <div className='mt-6 grid gap-4 grid-cols-1 lg:grid-cols-2'>
         {PROJECTS.map((project) => (
           <ProjectTile key={project.id} projectDetails={project} />
         ))}
