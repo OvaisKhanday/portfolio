@@ -24,7 +24,7 @@ const ProfilePicture: FC<ProfilePictureProps> = () => {
       animate={mainController}
       transition={{ duration: 1, delay: 0.25, ease: "linear" }}
     >
-      <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover transition hover:scale-125' />
+      <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover transition duration-500 hover:scale-125' />
     </motion.div>
   );
 };

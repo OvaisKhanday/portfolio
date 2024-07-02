@@ -26,20 +26,23 @@ const Introduction: FC<IntroductionProps> = () => {
           </p>
         </RevealAnimation>
         <div className='mt-3 flex md:justify-start justify-center items-center gap-2'>
-          <button className='rounded-lg  bg-zinc-600 text-zinc-50' onClick={() => window.open("/Resume SD.pdf", "_blank")}>
+          <button
+            className='rounded-lg  bg-zinc-600 text-zinc-50 h-10'
+            onClick={() => window.open("https://raw.githubusercontent.com/OvaisKhanday/Markdowns/main/cloud/resume.pdf", "_blank")}
+          >
             Download CV ✨
           </button>
           <span className='w-2 md:w-10' />
-          <button className='bg-gray-700 hover:bg-blue-600' onClick={() => window.open("https://linkedin.com/in/ovaiskhanday", "_blank")}>
+          <button className='bg-gray-700 h-10 hover:bg-blue-600' onClick={() => window.open("https://linkedin.com/in/ovaiskhanday", "_blank")}>
             <Linkedin className=' text-zinc-200' />
           </button>
-          <button className='bg-gray-700 hover:bg-red-800' onClick={() => window.open("mailto:ovaiskhanday927@gmail.com", "_blank")}>
+          <button className='bg-gray-700 h-10 hover:bg-red-800' onClick={() => window.open("mailto:ovaiskhanday927@gmail.com", "_blank")}>
             <Mail className=' text-zinc-200 ' />
           </button>
-          <button className='bg-gray-700 hover:bg-blue-500' onClick={() => window.open("https://twitter.com/ovaiskhanday", "_blank")}>
+          <button className='bg-gray-700 h-10 hover:bg-blue-500' onClick={() => window.open("https://twitter.com/ovaiskhanday", "_blank")}>
             <Twitter className=' text-zinc-200' />
           </button>
-          <button className='bg-gray-700 hover:bg-black' onClick={() => window.open("https://github.com/ovaiskhanday", "_blank")}>
+          <button className='bg-gray-700 h-10 hover:bg-black' onClick={() => window.open("https://github.com/ovaiskhanday", "_blank")}>
             <Github className=' text-zinc-200' />
           </button>
         </div>
