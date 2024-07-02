@@ -18,7 +18,9 @@ const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) =
           <p className='text-slate-300 font-semibold'>{tagLine}</p>
         </RevealAnimation>
 
-        <p className='text-slate-400 font-medium'>{description}</p>
+        <RevealAnimation>
+          <p className='text-slate-400 font-medium'>{description}</p>
+        </RevealAnimation>
         <div className='flex mt-4 gap-4'>
           <button
             disabled={!liveLink || liveLink === ""}

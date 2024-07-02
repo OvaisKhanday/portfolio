@@ -18,7 +18,7 @@ const RevealAnimation: FC<RevealAnimationProps> = ({ children, className, ...pro
   }, [inView, mainControl, slideControl]);
 
   return (
-    <div ref={ref} className={cn("relative overflow-hidden", className)} style={{ position: "relative", width: "fit-content" }} {...props}>
+    <div ref={ref} className={cn("relative", className)} style={{ width: "fit-content" }} {...props}>
       <motion.div
         variants={{
           hidden: { opacity: 0, y: 75 },
@@ -31,6 +31,7 @@ const RevealAnimation: FC<RevealAnimationProps> = ({ children, className, ...pro
         {children}
       </motion.div>
       <motion.div
+        className='overflow-hidden'
         variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
         initial='hidden'
         animate={slideControl}

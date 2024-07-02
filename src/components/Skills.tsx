@@ -1,12 +1,13 @@
-import { FC } from "react";
+import { FC, HTMLAttributes } from "react";
 import { AnimatedTooltip } from "./ui/AnimatedTooltip";
 import { SKILLS } from "../lib/skills";
+import { cn } from "../utils/cn";
 
-interface SkillsProps {}
+interface SkillsProps extends HTMLAttributes<HTMLDivElement> {}
 
-const Skills: FC<SkillsProps> = () => {
+const Skills: FC<SkillsProps> = ({ className, ...props }) => {
   return (
-    <div className=' flex flex-wrap gap-y-3 mt-4 sm:flex-nowrap flex-row items-center justify-center w-full'>
+    <div className={cn("flex flex-wrap gap-y-4 items-center justify-center ", className)} {...props}>
       <AnimatedTooltip items={SKILLS} />
     </div>
   );
