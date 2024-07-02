@@ -20,7 +20,7 @@ const Introduction: FC<IntroductionProps> = () => {
           <h3 className='font-bold text-xl text-zinc-300/85 mb-1 w-full  text-center md:text-left'>Software Developer</h3>
         </RevealAnimation>
         <RevealAnimation>
-          <p className='text-zinc-400 '>
+          <p className='text-zinc-400 font-medium '>
             An Aspiring Learner of Software Development, looking for career options and willing to expand my horizons by learning new things every day
             both technology and otherwise.
           </p>
