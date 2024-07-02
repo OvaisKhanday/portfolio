@@ -1,5 +1,7 @@
 import { Linkedin, Mail, Twitter } from "lucide-react";
 import { FC } from "react";
+import RevealAnimation from "./RevealAnimation";
+import Skills from "./Skills";
 
 interface IntroductionProps {}
 
@@ -10,14 +12,20 @@ const Introduction: FC<IntroductionProps> = () => {
         <img src='/photo square.webp' alt='Profile' className='w-full h-full object-cover' />
       </div>
       <div className='text-center md:text-left max-w-2xl'>
-        <h1 className='font-extrabold mb-6 lg:pb-3 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-5xl lg:text-6xl'>
-          Ovais Ahmad Khanday
-        </h1>
-        <h3 className='font-bold text-xl text-zinc-300/85 mb-1'>Software Developer</h3>
-        <p className='text-zinc-400'>
-          An Aspiring Learner of Software Development, looking for career options and willing to expand my horizons by learning new things every day
-          both technology and otherwise.
-        </p>
+        <RevealAnimation>
+          <h1 className='font-extrabold mb-6 lg:pb-3 pb-2 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 text-5xl lg:text-6xl'>
+            Ovais Ahmad Khanday
+          </h1>
+        </RevealAnimation>
+        <RevealAnimation>
+          <h3 className='font-bold text-xl text-zinc-300/85 mb-1 text-center md:text-left'>Software Developer</h3>
+        </RevealAnimation>
+        <RevealAnimation>
+          <p className='text-zinc-400'>
+            An Aspiring Learner of Software Development, looking for career options and willing to expand my horizons by learning new things every day
+            both technology and otherwise.
+          </p>
+        </RevealAnimation>
         <div className='mt-3 flex md:justify-start justify-center items-center gap-2'>
           <button className='rounded-lg  bg-zinc-600 text-zinc-50' onClick={() => window.open("/Resume SD.pdf", "_blank")}>
             Download CV ✨
@@ -33,6 +41,7 @@ const Introduction: FC<IntroductionProps> = () => {
             <Twitter className=' text-zinc-200' />
           </button>
         </div>
+        <Skills />
       </div>
     </div>
   );

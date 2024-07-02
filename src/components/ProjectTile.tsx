@@ -1,5 +1,6 @@
 import { Code2, Globe } from "lucide-react";
 import { ProjectTileProps } from "../lib/projects";
+import RevealAnimation from "./RevealAnimation";
 
 const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) => {
   const { title, tagLine, description, imageUrl, liveLink, codeLink } = projectDetails;
@@ -10,10 +11,14 @@ const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) =
         style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <div className=' p-4 rounded-tr-lg rounded-br-lg text-left flex-grow bg-gray-700'>
-        <h2 className='font-bold text-2xl mb-1'>{title}</h2>
-        <p className='text-slate-300 font-bold'>{tagLine}</p>
+        <RevealAnimation>
+          <h2 className='font-bold text-2xl mb-1'>{title}</h2>
+        </RevealAnimation>
+        <RevealAnimation>
+          <p className='text-slate-300 font-semibold'>{tagLine}</p>
+        </RevealAnimation>
 
-        <p className='text-slate-400 font-bold'>{description}</p>
+        <p className='text-slate-400 font-medium'>{description}</p>
         <div className='flex mt-4 gap-4'>
           <button disabled={!liveLink || liveLink === ""} title='live link' onClick={() => window.open(liveLink, "_blank")}>
             <Globe className='w-6 h-6' />
