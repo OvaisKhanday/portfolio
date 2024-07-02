@@ -22,7 +22,7 @@ const Introduction: FC<IntroductionProps> = () => {
           <button className='rounded-lg  bg-zinc-600 text-zinc-50' onClick={() => window.open("/Resume SD.pdf", "_blank")}>
             Download CV ✨
           </button>
-          <span className='w-10'></span>
+          <span className='w-10' />
           <button className='bg-gray-700' onClick={() => window.open("https://linkedin.com/in/ovaiskhanday", "_blank")}>
             <Linkedin className=' text-blue-400' />
           </button>
