@@ -7,7 +7,7 @@ interface SkillsProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Skills: FC<SkillsProps> = ({ className, ...props }) => {
   return (
-    <div className={cn("flex flex-wrap gap-y-4 items-center justify-center ", className)} {...props}>
+    <div className={cn("flex flex-wrap gap-y-2 gap-x-1 items-center justify-center ", className)} {...props}>
       <AnimatedTooltip items={SKILLS} />
     </div>
   );

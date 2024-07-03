@@ -19,7 +19,7 @@ const ProjectTile = ({ projectDetails }: { projectDetails: ProjectTileProps }) =
         </RevealAnimation>
 
         <RevealAnimation>
-          <p className='text-slate-400 font-normal'>{description}</p>
+          <p className='text-slate-400 font-normal text-sm'>{description}</p>
         </RevealAnimation>
         <div className='flex mt-4 gap-4'>
           <button
