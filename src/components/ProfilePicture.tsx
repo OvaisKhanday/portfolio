@@ -17,8 +17,8 @@ const ProfilePicture: FC<ProfilePictureProps> = () => {
       ref={ref}
       className='w-48 md:w-80 md:h-80 flex-shrink-0 h-48 rounded-full overflow-hidden  outline outline-2 outline-white'
       variants={{
-        hidden: { opacity: 0.2, y: -100, rotate: -12 },
-        visible: { opacity: 1, y: 0, rotate: 0 },
+        hidden: { opacity: 1 },
+        visible: { opacity: 1 },
       }}
       initial='hidden'
       animate={mainController}
