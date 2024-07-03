@@ -8,13 +8,13 @@ export const SKILLS: AnimatedTooltipItemType[] = [
   {
     id: 1,
     name: "React.js",
-    designation: "intermediate",
+    designation: "advanced",
     image: "/react.png",
   },
   {
     id: 2,
     name: "Next.js",
-    designation: "intermediate",
+    designation: "advanced",
     image: "/next.png",
   },
   {
@@ -62,7 +62,7 @@ export const SKILLS: AnimatedTooltipItemType[] = [
   {
     id: 10,
     name: "Tailwind",
-    designation: "intermediate",
+    designation: "advanced",
     image: "/tailwind.png",
   },
   {
