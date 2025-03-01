@@ -21,8 +21,7 @@ const Introduction: FC<IntroductionProps> = () => {
         </RevealAnimation>
         <RevealAnimation>
           <p className='text-zinc-400 font-medium text-xs md:text-sm'>
-            An Aspiring Learner of Software Development, looking for career options and willing to expand my horizons by learning new things every day
-            both technology and otherwise.
+            I’m a Software Developer specializing in frontend development, with almost 2 years of experience in React and Next.js. Currently, pursuring masters in Computer Science.
           </p>
         </RevealAnimation>
         <div className='mt-3 flex md:justify-start justify-center items-center gap-2'>
