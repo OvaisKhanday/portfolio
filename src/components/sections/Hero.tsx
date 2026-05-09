@@ -63,7 +63,7 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="top"
-      className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-32 sm:pt-36"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden pt-32 sm:pt-36"
     >
       {/* Three.js scene (lazy, gated) */}
       {showScene && (
@@ -81,8 +81,15 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-1/3 bg-gradient-to-b from-transparent to-bg"
       />
 
-      <div className="container-page relative w-full">
-        <div ref={contentRef} className="flex flex-col gap-10">
+      {/*
+       * The hero content lives inside a flex-1 zone so it can centre
+       * vertically without overlapping the in-flow marquee below it. The
+       * scroll-cue is positioned within this zone too, so it always sits
+       * just above the marquee instead of behind it.
+       */}
+      <div className="relative flex flex-1 items-center pb-12">
+        <div className="container-page relative w-full">
+          <div ref={contentRef} className="flex flex-col gap-10">
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -194,10 +201,11 @@ export function Hero() {
             />
           </span>
         </motion.div>
+        </div>
       </div>
 
-      {/* Roles marquee at bottom */}
-      <div className="absolute inset-x-0 bottom-0 border-y border-border/60 bg-surface/40 py-3 backdrop-blur-sm">
+      {/* Roles marquee — sits in the natural bottom of the flex-col section. */}
+      <div className="relative border-y border-border/60 bg-surface/40 py-3 backdrop-blur-sm">
         <Marquee duration={28}>
           {ROLES.map((role) => (
             <span

@@ -45,7 +45,6 @@ export const PROJECTS: Project[] = [
     description:
       "Quixlar lets anyone create, share, and take quizzes with rich question types, timers, and live scoring. Designed around a clean authoring flow and a lightweight, mobile-first participant experience.",
     media: [
-      { type: "image", src: "/projects/quixlar/hero.png", alt: "Quixlar dashboard" },
       { type: "image", src: "/projects/quixlar/screenshot-1.png", alt: "Quixlar dashboard" },
       { type: "image", src: "/projects/quixlar/screenshot-2.png", alt: "New Quiz dashboard" },
       {
