@@ -10,7 +10,7 @@ export const PERSONAL = {
   location: "India",
   email: "ovaiskhanday927@gmail.com",
   resumeUrl:
-    "https://raw.githubusercontent.com/OvaisKhanday/Markdowns/main/cloud/resume.pdf",
+    "/resume.pdf",
   socials: {
     github: "https://github.com/ovaiskhanday",
     linkedin: "https://linkedin.com/in/ovaiskhanday",
