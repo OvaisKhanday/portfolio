@@ -24,6 +24,20 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    id: 7,
+    title: "Team Tax",
+    tagLine: "An office tradition, turned into a shared treat queue.",
+    description:
+      "When something good happens to someone — a new laptop, a promotion, a work anniversary — the team asks them for a treat. Team Tax turns that tradition into a live, draggable queue where only somebody else can mark your debt settled, with a timeline and heatmap of when the team eats well. Multi-tenant on a single deployment: row-level isolation via a fail-closed ORM filter, and fractional indexing so concurrent drags never corrupt the board.",
+    media: [
+      { type: "image", src: "/projects/teamtax/hero.png", alt: "Team Tax queue board" },
+    ],
+    liveLink: "https://teamtax.app",
+    stack: ["Next.js", "TypeScript", "Postgres", "MikroORM", "Auth.js"],
+    year: "2026",
+    featured: true,
+  },
+  {
     id: 1,
     title: "CaseCobra",
     tagLine: "Custom-printed phone cases, end-to-end e-commerce.",
