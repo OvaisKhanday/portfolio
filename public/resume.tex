@@ -1,0 +1,188 @@
+%======================================================================
+% Ovais Ahmad Khanday --- Resume
+% Single-file build of the TLCresume template (Timmy Chan).
+% Compile with:  pdflatex resume.tex
+%======================================================================
+\documentclass[letter,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+%======================================================================
+% PREAMBLE (inlined TLCresume.sty)
+%======================================================================
+
+% FONT
+\usepackage[T1]{fontenc}
+\usepackage[default,semibold]{sourcesanspro}
+\usepackage[10pt]{moresize}
+\usepackage{anyfontsize}
+\usepackage{csquotes}
+
+% MARGINS AND SPACING
+\usepackage[margin=.5in, top=.5in, bottom=1in]{geometry}
+\raggedright  % left align, no indent
+\raggedbottom % top align, no indent
+
+% COLOR
+\usepackage{xcolor}
+\definecolor{highlight}{RGB}{61, 90, 128}
+
+% LINKS
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,urlcolor=highlight}
+
+% BULLET POINTS
+\usepackage[inline]{enumitem}
+\setlength{\tabcolsep}{0in}
+
+% SECTION FORMATTING
+\usepackage[nostruts]{titlesec}
+\titlespacing*{\section}{0em}{0.5em}{0em}
+\titleformat{\section}{\color{highlight} \scshape \raggedright \large}{}{0em}{}[\vspace{-0.75em}\hrulefill]
+
+% SUBSECTION FORMATTING
+\titlespacing*{\subsection}{0em}{0em}{0em}
+\titleformat{\subsection}{\bfseries}{}{0em}{}[]
+
+% BOLD COMMAND
+\newcommand{\skills}[1]{{\bfseries #1}}
+
+% SUBTEXT
+\newcommand{\subtext}[1]{\textit{#1}\par\vspace{-.75em}}
+
+% TIGHTER LIST THAN itemize
+\setlist[itemize]{align=parleft,left=0pt..1em}
+\newenvironment{zitemize}{%
+\begin{itemize} \itemsep 0pt \parskip 0pt \parsep 1pt}
+{\end{itemize}\vspace{-.5em}}
+
+% NO PAGE NUMBER
+\pagenumbering{gobble}
+
+%======================================================================
+% CONTACT INFORMATION
+%======================================================================
+\def\name{Ovais Ahmad Khanday}
+\def\phone{(+91) 700-610-8237}
+\def\city{Anantnag, J\&K}
+\def\email{ovaiskhanday927@gmail.com}
+\def\LinkedIn{ovaiskhanday}   % linkedin.com/in/______
+\def\github{ovaiskhanday}     % github username
+\def\role{Software Engineer}
+\def\portfolio{https://khanday.netlify.app/}
+
+%======================================================================
+% HEADER
+%======================================================================
+\usepackage{fancyhdr}
+\fancypagestyle{fancy}{%
+    \fancyhf{}
+    \lhead{\phone \\           % PHONE
+           \city \\            % CITY
+           \href{mailto:\email}{\email}}
+    \chead{%
+        \centering {\Huge \skills{\name} \vspace{.25em}} \\
+        {\color{highlight} \Large{\role}}}%
+    \rhead{\href{\portfolio}{khanday.netlify.app} \\                        % Portfolio
+           \href{https://github.com/\github}{github.com/\github} \\         % GitHub
+           \href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn}}
+    \renewcommand{\headrulewidth}{1pt}
+    \renewcommand{\headrule}{\hbox to\headwidth{%
+        \color{highlight}\leaders\hrule height \headrulewidth\hfill}}
+}
+\pagestyle{fancy}
+
+\setlength{\headheight}{90pt}
+\setlength{\headsep}{5pt}
+
+%======================================================================
+\begin{document}
+
+%====================
+% Objective Statement
+%====================
+{Software Engineer building, testing, and operating production cloud services on Node.js and TypeScript: RESTful API design, relational and NoSQL data modeling, Redis caching for high-concurrency traffic, and live-site monitoring on AWS with Docker, Kubernetes, and CI/CD pipelines.}
+
+%====================
+\section{Skills}
+%====================
+\begin{tabular}{p{11em} p{1em} p{43em}}
+\skills{Languages:} & & JavaScript, TypeScript, Python, Java, SQL, C/C++\\
+\skills{Backend \& APIs:} & & Node.js, Express.js, NestJS, RESTful API design, microservices, WebSockets, async/event-driven systems\\
+\skills{Databases \& Caching:} & & MongoDB, PostgreSQL, MySQL, Redis --- schema design, indexing, query optimization\\
+\skills{Cloud \& DevOps:} & & AWS (EC2, CloudFront, SQS), Docker, Kubernetes, Nginx, GitHub Actions, CI/CD, Git workflows\\
+\skills{Quality \& Operations:} & & Unit \& integration testing (Jest), code reviews, pull-request workflows, logging, metrics, live-site debugging\\
+\skills{Frontend:} & & Next.js, React, Tailwind CSS, Figma-to-code\\
+\end{tabular}
+
+%====================
+\section{Technical Experience}
+%====================
+\subsection{{Software Engineer \hfill February 2026 --- Present}}
+\subtext{Cybermind Works \hfill Chennai, India (On-site)}
+\begin{zitemize}
+\item Design, implement, test, and maintain features end-to-end for services used in production --- REST API design on Node.js, data modeling, unit tests, Docker builds, and GitHub Actions CI/CD --- from PRD and design review through to release.
+\item Cut API response latency by \textbf{40\%} on high-throughput endpoints through Redis caching layers and database index tuning.
+\item Monitor service health in live environments and investigate production incidents using logs and metrics, including an AWS EC2 pipeline whose CPU utilization I brought down from \textbf{100\% to 12\%} to keep the service stable under sustained load.
+\item Configured Nginx and CloudFront reverse proxies and operated a self-managed Kubernetes cluster on EC2 for staging, lowering infrastructure cost.
+\item Review teammates' pull requests and take part in design discussions and sprint planning; apply authentication, access-control, and data-privacy practices across customer-facing APIs.
+\end{zitemize}
+
+\subsection{{SDE Intern \hfill August 2025 --- February 2026}}
+\subtext{Cybermind Works \hfill Chennai, India (Hybrid)}
+\begin{zitemize}
+\item Delivered MVPs and scalable backend services in an Agile team against fast-changing requirements, working in a Git-based pull-request workflow with peer code review.
+\end{zitemize}
+
+%====================
+\section{Projects}
+%====================
+\subsection{\href{https://www.guardzapp.com/}{GuardZapp (SaaS): Realtime security operations platform}}
+\begin{zitemize}
+\item \textbf{Tech stack: [Node.js, Nestjs, Postgres, Redis, AWS SQS, Nextjs]}
+\item Built Node.js services for live GPS tracking, geo-fenced attendance, and QR-code checkpoint tracking, with Redis and SQS-backed processing absorbing continuous device traffic.
+\item Modeled the incident and reporting data behind severity-based alerting and automated payroll, billing, and SLA reports.
+\end{zitemize}
+
+\subsection{\href{https://www.schoolnetindia.com/}{SchoolNet (OneApp): Education Platform}}
+\begin{zitemize}
+\item \textbf{Tech stack: [Node.js, Nestjs, Postgres, Typescript, React]}
+\item Built student- and admin-side APIs and portal features serving \textbf{400+ centers and millions of students} across India.
+\end{zitemize}
+
+\subsection{\href{https://quixlar.vercel.app/}{Quixlar - The ultimate online quiz platform}}
+\begin{zitemize}
+\item \textbf{Tech stack: [MongoDB, Node.js, Nextjs, Typescript, OAuth]}
+\item Designed the \textbf{MongoDB} schema and quiz APIs, with an \textbf{admin dashboard} to create, update, and monitor quizzes, secured with OAuth.
+\end{zitemize}
+
+
+\subsection{\href{https://github.com/OvaisKhanday/chat8}{chat8 - A real-time chatting web-app}}
+\begin{zitemize}
+\item \textbf{Tech stack: [Redis, WebSockets, Nextjs, Typescript, OAuth]}
+\item \textbf{Real-time messaging} backend on \textbf{WebSockets} with Redis, achieving \textbf{low-latency} delivery to concurrent clients.
+\end{zitemize}
+
+% \subsection{\href{https://github.com/OvaisKhanday/careTracker-Flutter}{careTracker - school bus tracking app}}
+% \begin{zitemize}
+% \item \textbf{Tech stack: [Node.js, Express.js, MongoDB, Flutter, Arduino]}
+% \item \textbf{Express} and \textbf{MongoDB} backend streaming \textbf{real-time} bus locations to parents, fed by Arduino hardware installed on each bus.
+% \end{zitemize}
+
+%====================
+\section{Education}
+%====================
+\subsection{{Master's of Computer Applications - (9 CGPA)\hfill Jun 2024 --- Jun 2026}}
+\textit{University of Kashmir \hfill Kashmir, India}
+
+\subsection{{Bachelor's of Computer Application - (9 CGPA) \hfill Apr 2020 --- Feb 2024}}
+\textit{Govt. Degree College Anantnag \hfill Kashmir, India}
+
+% make a newpage wherever it is a clean break
+% \newpage
+
+%====================
+\section{Activities}
+%====================
+\textbf{Team Lead}: Led multiple projects to successful completion, showcasing \textbf{leadership and project management} skills.
+
+\end{document}
